@@ -4,11 +4,8 @@ var axios  = require("axios");
 var binanceSchema = require("../models/binance");
 var webSocket = require("ws");
 var wss = new webSocket("wss://stream.binance.com:9443/ws/!ticker@arr");
-//wss.on('connection', function connect(ws, req){
-    //console.log("ws", ws, req);
 
-
-    wss.on("message", async function data(message){
+  job = new   wss.on("message", async function data(message){
         var data = JSON.parse(message);
         console.log("data", data.length);
          //console.log("message length", message, message.length);
@@ -40,8 +37,6 @@ var wss = new webSocket("wss://stream.binance.com:9443/ws/!ticker@arr");
 
         //q == traded volume c =currentClosing price, Q = quantity  //s, E
         //console.log("message", typeof(message));
-
-//})
 
 
 wss.on("error", function Error(e){

@@ -23,7 +23,8 @@
     "node-bittrex-api": "^0.8.3",
     "serve-favicon": "~2.4.5",
     "signalr-client": "0.0.17",
-    "socket.io": "^0.9.16",
+    "socket.io": "^0.9.19",
+    "socket.io-client": "^2.1.1",
     "websocket": "^1.0.26",
     "ws": "^5.1.1"
   }
